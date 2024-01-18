@@ -32,7 +32,10 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           gradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
-        colors: [Colors.purple, Colors.deepPurpleAccent],
+        colors: const [
+          Color.fromARGB(255, 39, 39, 39),
+          Color.fromARGB(255, 210, 35, 66)
+        ],
       )),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -41,7 +44,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           CustomText(
             questions[currentQuestion].text,
             fontSize: 15,
-            color: Colors.white,
+            color: Color.fromARGB(220, 255, 255, 255),
           ),
           const SizedBox(height: 15),
           ...questions[currentQuestion].getShuffledAnswers().map(
@@ -50,7 +53,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
+                        backgroundColor: Color.fromARGB(110, 45, 45, 45),
                       ),
                       onPressed: (){
                         changeQuestion(e);
@@ -58,7 +61,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       child: CustomText(
                         e,
                         fontSize: 15,
-                        color: Colors.white,
+                        color: Color.fromARGB(220, 255, 255, 255),
                       ),
                     ),
                     const SizedBox(

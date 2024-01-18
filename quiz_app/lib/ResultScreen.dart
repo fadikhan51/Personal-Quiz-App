@@ -48,7 +48,11 @@ class ResultScreen extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [Colors.purple, Colors.deepPurpleAccent],
+          colors: const [
+            Color.fromARGB(255, 210, 35, 66),
+            Color.fromARGB(255, 39, 39, 39)
+
+          ],
         ),
       ),
       child: Column(
@@ -57,7 +61,7 @@ class ResultScreen extends StatelessWidget {
           Text(
             'You answered ${correctAns()} out of ${questions.length} questions correctly!',
             style: GoogleFonts.lato(
-              color: const Color.fromARGB(255, 230, 200, 253),
+              color: const Color.fromARGB(255, 230, 200, 200),
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),

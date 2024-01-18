@@ -39,7 +39,7 @@ class SummaryScreen extends StatelessWidget {
                         children: [
                           Text(
                             (data['question'] as String),
-                            style: GoogleFonts.lato(
+                            style: GoogleFonts.dosis(
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -51,13 +51,13 @@ class SummaryScreen extends StatelessWidget {
                           Text(
                             (data['user_answer'] as String),
                             style: const TextStyle(
-                              color: Color.fromARGB(255, 202, 171, 252),
+                              color: Color.fromARGB(255, 202, 171, 200),
                             ),
                           ),
                           Text(
                             (data['correct_answer'] as String),
                             style: const TextStyle(
-                              color: Color.fromARGB(255, 181, 254, 246),
+                              color: Color.fromARGB(225, 255, 255, 255),
                             ),
                           ),
                           const SizedBox(

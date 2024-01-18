@@ -33,24 +33,26 @@ class _QuizState extends State<Quiz> {
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
     print(answer);
-    if(selectedAnswers.length == questions.length) {
+    if (selectedAnswers.length == questions.length) {
       setState(() {
         activeScreen = 'result-screen';
       });
     }
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: activeScreen == 'start-screen'
-            ? GradientContainer(
-                startQuiz, const [Colors.purple, Colors.deepPurpleAccent])
+            ? GradientContainer(startQuiz, const [
+                Color.fromARGB(255, 39, 39, 39),
+                Color.fromARGB(255, 210, 35, 66)
+              ])
             : activeScreen == 'result-screen'
-                ? ResultScreen(selectedAnswers: selectedAnswers, restartFunction: startQuiz)
+                ? ResultScreen(
+                    selectedAnswers: selectedAnswers,
+                    restartFunction: startQuiz)
                 : QuestionsScreen(chooseAnswer),
       ),
     );
